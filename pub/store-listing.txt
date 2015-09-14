@@ -12,7 +12,7 @@ This app adds Cornwall Transit buses information to MonTransit.
 
 This app provides the buses schedule.
 
-Cornwall Transit buses serve Cornwall in New Ontario, Canada.
+Cornwall Transit buses serve Cornwall in Ontario, Canada.
 
 Once this application is installed, the MonTransit app will display buses information (schedule...).
 
