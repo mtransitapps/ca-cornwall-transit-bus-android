@@ -5,12 +5,12 @@ Autobus Cornwall Transit pour MonTransit.
 Horaires…
 ----------
 What's new in this version?:
-Horaires du 1 avril 2015 au 31 décembre 2016.
+Horaires du 1 avril 2015 au 30 décembre 2017.
 ----------
 Full description:
 Cette application ajoute les informations des autobus de Cornwall Transit à MonTransit.
 
-L'app contient les horaires plannifiées.
+L'app contient les horaires planifiés.
 
 Les autobus de Cornwall Transit desservent Cornwall en Ontario, Canada.
 
