@@ -133,7 +133,7 @@
 438,'','Glengarry & Kenyon',45.0328280407,-74.7071222252
 439,'','Glengarry & Dundas',45.032015,-74.705739
 440,'','Glengarry Apts',45.0290352,-74.7046138
-501,'','Nav Ctr (Main Entrance)',45.0279135526,-74.6832437972
+501,'','DEV Hotel (Main Entrance)',45.0279135526,-74.6832437972
 502,'','Gln Stor Dun Lodge To Pitt & 2nd',45.0251213956,-74.6835852331
 503,'','Montreal Rd & Dunbar',45.0233,-74.686318
 504,'','Montreal Rd & Leonia',45.0223774678,-74.6882497028
@@ -166,8 +166,8 @@
 533,'','Montreal Rd & Gardner',45.0209781907,-74.6918495731
 534,'','Montreal Rd & Anthony',45.021751,-74.689608
 535,'','Montreal Rd & Bryden',45.0227021228,-74.6872657388
-536,'','Gln Stor Dun Lodge To Nav Ctr',45.0252259501,-74.6831833109
-537,'','Nav Ctr (East Entrance)',45.0290556733,-74.6803749206
+536,'','Gln Stor Dun Lodge To DEV Hotel',45.0252259501,-74.6831833109
+537,'','DEV Hotel (East Entrance)',45.0290556733,-74.6803749206
 601,'','Ross & Cornwall Ctr Rd',45.0610039383,-74.767975012
 602,'','Ross & Mercier',45.057423737,-74.7650953053
 603,'','Ross & McKenzie',45.0541875779,-74.762167966
