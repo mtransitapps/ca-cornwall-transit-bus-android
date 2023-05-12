@@ -10,10 +10,10 @@ Cette application a seulement une icône temporaire : télécharger l'app MonTra
 
 Vous pouvez installer cette application sur la carte SD mais ce n'est pas recommandé.
 
-Ces horaires sont générées à partir du fichier GTFS fourni par la Cornwall Transit, Ville de Cornwall.
+Ces horaires sont générées à partir du fichier GTFS fourni par la Cornwall Transit.
 http://maps.cornwall.ca/
 
 Cette application est gratuite et open-source : 
 https://github.com/mtransitapps/ca-cornwall-transit-bus-android
 
-Cette application n'est pas associée à Cornwall Transit, Ville de Cornwall.
+Cette application n'est pas associée à Cornwall Transit.
