@@ -1,4 +1,4 @@
-# Cornwall Transit TheBus for [MonTransit](https://github.com/mtransitapps/mtransit-for-android)
+# Cornwall Transit buses for [MonTransit](https://github.com/mtransitapps/mtransit-for-android)
 
 <img width="25%" height="25%" src="https://raw.githubusercontent.com/mtransitapps/ca-cornwall-transit-bus-android/master/src/main/play/listings/en-US/graphics/icon/1.png"/>
 
