@@ -58,10 +58,13 @@ public class CornwallTransitBusAgencyTools extends DefaultAgencyTools {
 				final int rsn = Integer.parseInt(rsnS);
 				switch (rsn) {
 				case 1:
-					if ("MCCONNELL".equals(routeId)) {
+					switch (routeId) {
+					case "MCCONNELL":
 						return 1_001L;
-					} else if ("PITT".equals(routeId)) {
+					case "PITT":
 						return 1_002L;
+					case "POWWOW":
+						return 1_003L;
 					}
 					break;
 				case 2:
@@ -180,10 +183,13 @@ public class CornwallTransitBusAgencyTools extends DefaultAgencyTools {
 			int rsn = Integer.parseInt(rsnS);
 			switch (rsn) {
 			case 1:
-				if ("MCCONNELL".equals(routeId)) {
+				switch (routeId) {
+				case "MCCONNELL":
 					return "1 MC";
-				} else if ("PITT".equals(routeId)) {
+				case "PITT":
 					return "1 PT";
+				case "POWWOW":
+					return "1 PW";
 				}
 				break;
 			case 2:
