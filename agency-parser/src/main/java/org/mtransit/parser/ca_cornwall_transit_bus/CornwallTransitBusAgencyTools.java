@@ -21,11 +21,6 @@ public class CornwallTransitBusAgencyTools extends DefaultAgencyTools {
 		new CornwallTransitBusAgencyTools().start(args);
 	}
 
-	@Override
-	public boolean defaultExcludeEnabled() {
-		return true;
-	}
-
 	@NotNull
 	@Override
 	public String getAgencyName() {
@@ -50,7 +45,7 @@ public class CornwallTransitBusAgencyTools extends DefaultAgencyTools {
 
 	@Override
 	public long getRouteId(@NotNull GRoute gRoute) {
-		//noinspection deprecation
+		//noinspection DiscouragedApi
 		final String routeId = gRoute.getRouteId();
 		if (!CharUtils.isDigitsOnly(routeId)) {
 			final String rsnS = gRoute.getRouteShortName();
@@ -158,6 +153,11 @@ public class CornwallTransitBusAgencyTools extends DefaultAgencyTools {
 					return 88L;
 				case 99:
 					return 99L;
+				case 2025:
+					if ("POWWOW".equals(routeId)) {
+						return 2025L;
+					}
+					break;
 				}
 			}
 			if (routeId.startsWith("CANADA DAY")) {
@@ -177,7 +177,7 @@ public class CornwallTransitBusAgencyTools extends DefaultAgencyTools {
 	@Override
 	public String getRouteShortName(@NotNull GRoute gRoute) {
 		final String rsnS = gRoute.getRouteShortName();
-		//noinspection deprecation
+		//noinspection DiscouragedApi
 		final String routeId = gRoute.getRouteId();
 		if (CharUtils.isDigitsOnly(rsnS)) {
 			int rsn = Integer.parseInt(rsnS);
@@ -280,6 +280,8 @@ public class CornwallTransitBusAgencyTools extends DefaultAgencyTools {
 				return "88 CA";
 			case 99:
 				return "99 BP";
+			case 2025:
+				return "2025 PW";
 			}
 		}
 		if (routeId.startsWith("CANADA DAY")) {
@@ -300,7 +302,7 @@ public class CornwallTransitBusAgencyTools extends DefaultAgencyTools {
 		routeLongName = CleanUtils.toLowerCaseUpperCaseWords(Locale.ENGLISH, routeLongName);
 		routeLongName = CleanUtils.fixMcXCase(routeLongName);
 		routeLongName = STARTS_WITH_RSN.matcher(routeLongName).replaceAll(EMPTY);
-		return CleanUtils.cleanLabel(routeLongName);
+		return CleanUtils.cleanLabel(getFirstLanguageNN(), routeLongName);
 	}
 
 	@Override
@@ -340,7 +342,7 @@ public class CornwallTransitBusAgencyTools extends DefaultAgencyTools {
 		tripHeadsign = CleanUtils.keepToAndRemoveVia(tripHeadsign);
 		tripHeadsign = CleanUtils.cleanNumbers(tripHeadsign);
 		tripHeadsign = CleanUtils.cleanStreetTypes(tripHeadsign);
-		return CleanUtils.cleanLabel(tripHeadsign);
+		return CleanUtils.cleanLabel(getFirstLanguageNN(), tripHeadsign);
 	}
 
 	@NotNull
@@ -352,6 +354,6 @@ public class CornwallTransitBusAgencyTools extends DefaultAgencyTools {
 		gStopName = CleanUtils.fixMcXCase(gStopName);
 		gStopName = CleanUtils.cleanNumbers(gStopName);
 		gStopName = CleanUtils.cleanStreetTypes(gStopName);
-		return CleanUtils.cleanLabel(gStopName);
+		return CleanUtils.cleanLabel(getFirstLanguageNN(), gStopName);
 	}
 }
