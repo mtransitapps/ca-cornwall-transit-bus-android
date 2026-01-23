@@ -3,4 +3,6 @@
     <integer name="gtfs_real_time_db_version">1</integer>
     <string name="gtfs_real_time_for_poi_authority">@string/gtfs_rts_authority</string>
     <string name="gtfs_real_time_agency_service_alerts_url">https://metrolinx.tmix.se/gtfs-realtime-cornwall/alerts.pb</string>
+    <string name="gtfs_real_time_agency_vehicle_positions_url">https://metrolinx.tmix.se/gtfs-realtime-cornwall/vehiclepositions.pb</string>
+    <string name="gtfs_real_time_agency_trip_updates_url">https://metrolinx.tmix.se/gtfs-realtime-cornwall/tripupdates.pb</string>
 </resources>
