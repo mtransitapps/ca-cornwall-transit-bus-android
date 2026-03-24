@@ -6,14 +6,14 @@ Cornwall Transit buses serve Cornwall in Ontario, Canada.
 
 Once this application is installed, the MonTransit app will display buses information (schedule...).
 
-This application only has a temporary icon: download the MonTransit app (free) in the "More ..." section bellow or by following this Google Play link https://bit.ly/MonTransitPlay
+This application only has a temporary icon: download the MonTransit app (free) in the "More ..." section bellow or by following this Google Play link https://goo.gl/pCk5mV
 
 You can install this application on the SD card but it is not recommended.
 
-The information comes from the GTFS file provided by Cornwall Transit.
-https://www.cornwall.ca/en/city-hall/open-data.aspx
-
 This application is free and open-source:
 https://github.com/mtransitapps/ca-cornwall-transit-bus-android
+
+The information comes from the GTFS file provided by Cornwall Transit.
+https://www.cornwall.ca/en/city-hall/open-data.aspx
 
 This app is not related with Cornwall Transit.
