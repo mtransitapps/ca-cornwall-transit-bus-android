@@ -13,34 +13,10 @@ import org.mtransit.parser.mt.data.MAgency;
 import java.util.Locale;
 import java.util.regex.Pattern;
 
-// [OLD] http://maps.cornwall.ca/
-// https://www.cornwall.ca/en/city-hall/open-data.aspx
 public class CornwallTransitBusAgencyTools extends DefaultAgencyTools {
 
 	public static void main(@NotNull String[] args) {
 		new CornwallTransitBusAgencyTools().start(args);
-	}
-
-	@NotNull
-	@Override
-	public String getAgencyName() {
-		return "Cornwall Transit";
-	}
-
-	@NotNull
-	@Override
-	public Integer getAgencyRouteType() {
-		return MAgency.ROUTE_TYPE_BUS;
-	}
-
-	@Override
-	public boolean defaultRouteIdEnabled() {
-		return false; // too complex
-	}
-
-	@Override
-	public boolean useRouteShortNameForRouteId() {
-		return false; // too complex
 	}
 
 	@Override
@@ -153,9 +129,9 @@ public class CornwallTransitBusAgencyTools extends DefaultAgencyTools {
 					return 88L;
 				case 99:
 					return 99L;
-				case 2025:
+				case 2026:
 					if ("POWWOW".equals(routeId)) {
-						return 2025L;
+						return 16_23_000L;
 					}
 					break;
 				}
@@ -280,8 +256,8 @@ public class CornwallTransitBusAgencyTools extends DefaultAgencyTools {
 				return "88 CA";
 			case 99:
 				return "99 BP";
-			case 2025:
-				return "2025 PW";
+			case 2026: // POWWOW
+				return "PW";
 			}
 		}
 		if (routeId.startsWith("CANADA DAY")) {
@@ -292,68 +268,5 @@ public class CornwallTransitBusAgencyTools extends DefaultAgencyTools {
 			}
 		}
 		throw new MTLog.Fatal("Unexpected route short name %s!", gRoute.toStringPlus());
-	}
-
-	private static final Pattern STARTS_WITH_RSN = Pattern.compile("(^[0-9]+-)", Pattern.CASE_INSENSITIVE);
-
-	@NotNull
-	@Override
-	public String cleanRouteLongName(@NotNull String routeLongName) {
-		routeLongName = CleanUtils.toLowerCaseUpperCaseWords(Locale.ENGLISH, routeLongName);
-		routeLongName = CleanUtils.fixMcXCase(routeLongName);
-		routeLongName = STARTS_WITH_RSN.matcher(routeLongName).replaceAll(EMPTY);
-		return CleanUtils.cleanLabel(getFirstLanguageNN(), routeLongName);
-	}
-
-	@Override
-	public boolean defaultAgencyColorEnabled() {
-		return true;
-	}
-
-	private static final String AGENCY_COLOR_BLUE = "0072BC"; // BLUE (from PDF map)
-
-	private static final String AGENCY_COLOR = AGENCY_COLOR_BLUE;
-
-	@NotNull
-	@Override
-	public String getAgencyColor() {
-		return AGENCY_COLOR;
-	}
-
-	@Override
-	public boolean directionFinderEnabled() {
-		return true;
-	}
-
-	private static final Pattern STARTS_WITH_CORNWALL = Pattern.compile("(^Cornwall )", Pattern.CASE_INSENSITIVE);
-
-	private static final Pattern COMMUNITY_SERVICE_ = CleanUtils.cleanWords("community service");
-	private static final String COMMUNITY_SERVICE_REPLACEMENT = CleanUtils.cleanWordsReplacement("CS");
-
-	@NotNull
-	@Override
-	public String cleanTripHeadsign(@NotNull String tripHeadsign) {
-		tripHeadsign = CleanUtils.toLowerCaseUpperCaseWords(Locale.ENGLISH, tripHeadsign);
-		tripHeadsign = STARTS_WITH_CORNWALL.matcher(tripHeadsign).replaceAll(EMPTY);
-		tripHeadsign = COMMUNITY_SERVICE_.matcher(tripHeadsign).replaceAll(COMMUNITY_SERVICE_REPLACEMENT);
-		tripHeadsign = CleanUtils.fixMcXCase(tripHeadsign);
-		tripHeadsign = CleanUtils.CLEAN_AND.matcher(tripHeadsign).replaceAll(CleanUtils.CLEAN_AND_REPLACEMENT);
-		tripHeadsign = CleanUtils.CLEAN_AT.matcher(tripHeadsign).replaceAll(CleanUtils.CLEAN_AT_REPLACEMENT);
-		tripHeadsign = CleanUtils.keepToAndRemoveVia(tripHeadsign);
-		tripHeadsign = CleanUtils.cleanNumbers(tripHeadsign);
-		tripHeadsign = CleanUtils.cleanStreetTypes(tripHeadsign);
-		return CleanUtils.cleanLabel(getFirstLanguageNN(), tripHeadsign);
-	}
-
-	@NotNull
-	@Override
-	public String cleanStopName(@NotNull String gStopName) {
-		gStopName = CleanUtils.CLEAN_AND.matcher(gStopName).replaceAll(CleanUtils.CLEAN_AND_REPLACEMENT);
-		gStopName = CleanUtils.CLEAN_AT.matcher(gStopName).replaceAll(CleanUtils.CLEAN_AT_REPLACEMENT);
-		gStopName = CleanUtils.SAINT.matcher(gStopName).replaceAll(CleanUtils.SAINT_REPLACEMENT);
-		gStopName = CleanUtils.fixMcXCase(gStopName);
-		gStopName = CleanUtils.cleanNumbers(gStopName);
-		gStopName = CleanUtils.cleanStreetTypes(gStopName);
-		return CleanUtils.cleanLabel(getFirstLanguageNN(), gStopName);
 	}
 }
