@@ -1,0 +1,30 @@
+{
+    "default_route_id_enabled": false,
+    "default_route_id_enabled_comment": "too complex",
+    "use_route_short_name_for_route_id": false,
+    "use_route_short_name_for_route_id_comment": "too complex",
+    "default_route_long_name_enabled": true,
+    "route_long_name_cleaners": [
+        {
+            "regex": "(^[0-9]+-)",
+            "ignore_case": true,
+            "comment": "remove starts with RSN"
+        }
+    ],
+    "direction_finder_enabled": true,
+    "trip_headsign_remove_via": true,
+    "trip_headsign_cleaners": [
+        {
+            "regex": "(^Cornwall )",
+            "ignore_case": true,
+            "comment": "remove starts with Cornwall"
+        },
+        {
+            "regex": "(community service)",
+            "ignore_case": true,
+            "replacement": "CS",
+            "comment": "replace community service with CS"
+        }
+    ],
+    "stop_name_cleaners": []
+}
