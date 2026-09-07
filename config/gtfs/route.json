@@ -1,8 +1,57 @@
 {
-    "default_route_id_enabled": false,
-    "default_route_id_enabled_comment": "too complex",
+    "default_route_id_enabled": true,
     "use_route_short_name_for_route_id": false,
     "use_route_short_name_for_route_id_comment": "too complex",
+    "route_short_name_to_route_id_configs": [
+        {
+            "route_short_name": "PITT",
+            "route_id": 1002
+        },
+        {
+            "route_short_name": "SUNRISE",
+            "route_id": 2002
+        },
+        {
+            "route_short_name": "BROOKDALE",
+            "route_id": 3001
+        },
+        {
+            "route_short_name": "RIVERDALE",
+            "route_id": 4001
+        },
+        {
+            "route_short_name": "MCCONNELL",
+            "route_id": 5001
+        },
+        {
+            "route_short_name": "CUMBERLAND",
+            "route_id": 6001
+        },
+        {
+            "route_short_name": "MONTREAL",
+            "route_id": 7001
+        },
+        {
+            "route_short_name": "BUSINESS PARK 8",
+            "route_id": 8001
+        },
+        {
+            "route_short_name": "BUSINESS PARK 9",
+            "route_id": 9001
+        },
+        {
+            "route_short_name": "CS-EAST",
+            "route_id": 61001
+        },
+        {
+            "route_short_name": "CS-WEST",
+            "route_id": 61002
+        },
+        {
+            "route_short_name": "POWWOW",
+            "route_id": 1623000
+        }
+    ],
     "default_route_long_name_enabled": true,
     "route_long_name_cleaners": [
         {
