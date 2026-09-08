@@ -1,0 +1,13 @@
+{
+    "target_route_type_id": 3,
+    "default_color": "0072BC",
+    "default_color_comment": "BLUE (from PDF map)",
+    "default_color_enabled": true,
+    "default_strings_cleaner_enabled": true,
+    "to_lower_upper_case_words": true,
+    "ignore_upper_case_words": [
+        "MPIQC",
+        "RDC",
+        "SCM"
+    ]
+}

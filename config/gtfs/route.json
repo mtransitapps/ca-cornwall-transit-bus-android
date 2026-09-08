@@ -1,0 +1,147 @@
+{
+    "default_route_id_enabled": true,
+    "use_route_short_name_for_route_id": false,
+    "use_route_short_name_for_route_id_comment": "too complex",
+    "route_short_name_to_route_id_configs": [
+        {
+            "route_short_name": "PITT",
+            "route_id": 1002
+        },
+        {
+            "route_short_name": "SUNRISE",
+            "route_id": 2002
+        },
+        {
+            "route_short_name": "BROOKDALE",
+            "route_id": 3001
+        },
+        {
+            "route_short_name": "RIVERDALE",
+            "route_id": 4001
+        },
+        {
+            "route_short_name": "MCCONNELL",
+            "route_id": 5001
+        },
+        {
+            "route_short_name": "CUMBERLAND",
+            "route_id": 6001
+        },
+        {
+            "route_short_name": "MONTREAL",
+            "route_id": 7001
+        },
+        {
+            "route_short_name": "BUSINESS PARK 8",
+            "route_id": 8001
+        },
+        {
+            "route_short_name": "BUSINESS PARK 9",
+            "route_id": 9001
+        },
+        {
+            "route_short_name": "CS-EAST",
+            "route_id": 61001
+        },
+        {
+            "route_short_name": "CS-WEST",
+            "route_id": 61002
+        },
+        {
+            "route_short_name": "POWWOW",
+            "route_id": 1623000
+        }
+    ],
+    "route_short_name_cleaners": [
+        {
+            "regex": ".*",
+            "ignore_case": true,
+            "comment": "remove original route short name"
+        }
+    ],
+    "route_to_short_name_configs": [
+        {
+            "route_id": "PITT",
+            "route_long_name": "1-PITT",
+            "route_short_name": "1 PT"
+        },{
+            "route_id": "SUNRISE",
+            "route_long_name": "2-SUNRISE",
+            "route_short_name": "2 SR"
+        },
+        {
+            "route_id": "BROOKDALE",
+            "route_long_name": "3-BROOKDALE",
+            "route_short_name": "3 BD"
+        },
+        {
+            "route_id": "RIVERDALE",
+            "route_long_name": "4-RIVERDALE",
+            "route_short_name": "4 RV"
+        },
+        {
+            "route_id": "MCCONNELL",
+            "route_long_name": "5-MCCONNELL",
+            "route_short_name": "5 MC"
+        },
+        {
+            "route_id": "CUMBERLAND",
+            "route_long_name": "6-CUMBERLAND",
+            "route_short_name": "6 CB"
+        },
+        {
+            "route_id": "MONTREAL",
+            "route_long_name": "7-MONTREAL",
+            "route_short_name": "7 MT"
+        },
+        {
+            "route_id": "BUSINESS PARK 8",
+            "route_long_name": "8-BUSINESS PARK 8",
+            "route_short_name": "8 BP"
+        },
+        {
+            "route_id": "BUSINESS PARK 9",
+            "route_long_name": "9-BUSINESS PARK 9",
+            "route_short_name": "9 BP"
+        },
+        {
+            "route_id": "CS-EAST",
+            "route_long_name": "COMMUNITY SERVICE EAST",
+            "route_short_name": "61 E"
+        },
+        {
+            "route_id": "CS-WEST",
+            "route_long_name": "COMMUNITY SERVICE WEST",
+            "route_short_name": "61 W"
+        },
+        {
+            "route_id": "POWWOW",
+            "route_long_name": "POWWOW",
+            "route_short_name": "PW"
+        }
+    ],
+    "default_route_long_name_enabled": true,
+    "route_long_name_cleaners": [
+        {
+            "regex": "(^[0-9]+-)",
+            "ignore_case": true,
+            "comment": "remove starts with RSN"
+        }
+    ],
+    "direction_finder_enabled": true,
+    "trip_headsign_remove_via": true,
+    "trip_headsign_cleaners": [
+        {
+            "regex": "(^Cornwall )",
+            "ignore_case": true,
+            "comment": "remove starts with Cornwall"
+        },
+        {
+            "regex": "(community service)",
+            "ignore_case": true,
+            "replacement": "CS",
+            "comment": "replace community service with CS"
+        }
+    ],
+    "stop_name_cleaners": []
+}
