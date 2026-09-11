@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-    <integer name="gtfs_rts_db_version">20260907</integer>
+    <integer name="gtfs_rts_db_version">20260911</integer>
     <string name="gtfs_rts_contact_us">https://www.cornwall.ca/en/public-safety-transportation/transit/</string>
     <string name="gtfs_rts_contact_us_fr">https://www.cornwall.ca/fr/securite-publique-et-transport/transport-en-commun/</string>
     <string name="gtfs_rts_fares">https://www.cornwall.ca/en/public-safety-transportation/transit/fares-and-passes/</string>
